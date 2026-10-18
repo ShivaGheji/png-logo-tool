@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "png-logo-tool"
+version = "1.0.0"
+description = "CLI tool to recolor, resize, trim, and adjust transparent PNG margins"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dependencies = ["Pillow>=10.0.0"]
+
+[project.scripts]
+png-logo-tool = "png_logo_tool.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
